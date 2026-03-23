@@ -1,8 +1,8 @@
-# 🩺 Diabetes Prediction Model – Your First MLOps Project (FastAPI + Docker + K8s)
+# 🩺 Diabetes Prediction Model – MLOps Project (FastAPI + Docker + K8s)
 
-> 🎥 YouTube video for the project: **"Build Your First MLOps Project"**
+> 🚀 A hands-on MLOps project demonstrating end-to-end ML model deployment using FastAPI, Docker, and Kubernetes.
 
-This project helps you learn **Building and Deploying an ML Model** using a simple and real-world use case: predicting whether a person is diabetic based on health metrics. We’ll go from:
+This project demonstrates **Building and Deploying an ML Model** using a simple and real-world use case: predicting whether a person is diabetic based on health metrics.
 
 - ✅ Model Training
 - ✅ Building the Model locally
@@ -15,13 +15,14 @@ This project helps you learn **Building and Deploying an ML Model** using a simp
 ## 📊 Problem Statement
 
 Predict if a person is diabetic based on:
+
 - Pregnancies
 - Glucose
 - Blood Pressure
 - BMI
 - Age
 
-We use a Random Forest Classifier trained on the **Pima Indians Diabetes Dataset**.
+We use a **Random Forest Classifier** trained on the **Pima Indians Diabetes Dataset**.
 
 ---
 
@@ -30,38 +31,38 @@ We use a Random Forest Classifier trained on the **Pima Indians Diabetes Dataset
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/iam-veeramalla/first-mlops-project.git
-cd first-mlops-project
+git clone https://github.com/sriram10412/mlops_test.git
+cd mlops_test
 ```
 
 ### 2. Create Virtual Environment
 
-```
+```bash
 python3 -m venv .mlops
 source .mlops/bin/activate
 ```
 
 ### 3. Install Dependencies
 
-```
+```bash
 pip install -r requirements.txt
 ```
 
-## Train the Model
+## 🧠 Train the Model
 
-```
+```bash
 python train.py
 ```
 
-## Run the API Locally
+## ▶️ Run the API Locally
 
-```
+```bash
 uvicorn main:app --reload
 ```
 
-### Sample Input for /predict
+### Sample Input for `/predict`
 
-```
+```json
 {
   "Pregnancies": 2,
   "Glucose": 130,
@@ -71,29 +72,44 @@ uvicorn main:app --reload
 }
 ```
 
-## Dockerize the API
+## 🐳 Dockerize the API
 
 ### Build the Docker Image
 
-```
+```bash
 docker build -t diabetes-prediction-model .
 ```
 
 ### Run the Container
 
-```
+```bash
 docker run -p 8000:8000 diabetes-prediction-model
 ```
 
-## Deploy to Kubernetes
+## ☸️ Deploy to Kubernetes
 
-```
+```bash
 kubectl apply -f diabetes-prediction-model-deployment.yaml
 ```
 
-🙌 Credits
+---
 
-Created by `ABHISHEK VEERAMALLA`
+## 🛠️ Tech Stack
 
-Subscribe for more DevOps + MLOps content on the YouTube Channel - `Abhishek.Veeramalla`
+| Layer | Technology |
+|---|---|
+| ML Model | Scikit-learn (Random Forest) |
+| API | FastAPI |
+| Containerization | Docker |
+| Orchestration | Kubernetes |
+| Language | Python 3 |
 
+---
+
+## 👤 Author
+
+**Sriram Vempati**  
+Senior Platform Engineer | DevSecOps & Cloud Infrastructure | Kubernetes Security  
+📧 vempati.sairam24@gmail.com  
+🔗 [linkedin.com/in/sriramvempati](https://linkedin.com/in/sriramvempati)  
+🐙 [github.com/sriram10412](https://github.com/sriram10412)
